@@ -30,8 +30,6 @@ Write-Host -ForegroundColor Green “Start OSDCloud”
 
 Start-OSDCloud -OSLanguage en-us -OSBuild 22H2 -OSEdition Enterprise -ZTI
 
-#test
-
 #================================================
 #  [PostOS] OOBEDeploy Configuration
 #================================================
@@ -86,13 +84,9 @@ If (!(Test-Path "C:\ProgramData\OSDeploy")) {
 }
 $OOBEDeployJson | Out-File -FilePath "C:\ProgramData\OSDeploy\OSDeploy.OOBEDeploy.json" -Encoding ascii -Force
 
-
-
-
-#Restart from WinPE
-
-Write-Host -ForegroundColor Green “Restarting in 20 seconds!”
-
+#=======================================================================
+#   Restart-Computer
+#=======================================================================
+Write-Host  -ForegroundColor Green "Restarting in 20 seconds!"
 Start-Sleep -Seconds 20
-
 wpeutil reboot
