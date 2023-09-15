@@ -31,7 +31,7 @@ $env:Path = $env:Path+";C:\Program Files\WindowsPowerShell\Scripts"
 #=========================================================
 #   Set Debug to True if you want the errors to be shown
 #=========================================================
-$OSDDEBUG = "False"
+$OSDDEBUG = "True"
 
 If ($OSDDEBUG -eq "True") {
    Write-Host -ForegroundColor Red "Script is in debug mode!"
